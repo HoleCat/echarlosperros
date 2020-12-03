@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}" type="text/css">
+</head>
+<body>
+    <header class="bg-red">
+        <hr>
+        <h1>Modulo inicial</h1>
+        <hr>
+    </header>
+    {% block main_content %}
+    {% endblock %}   
+    <footer>
+        <hr>
+        <h1>Footer inicial</h1>
+        <hr>
+    </footer>
+</body>
+<script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+</html>

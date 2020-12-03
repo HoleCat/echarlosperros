@@ -93,10 +93,10 @@ if os.getenv('GAE_APPLICATION', None):
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'HOST': '/cloudsql/[YOUR-CONNECTION-NAME]',
-            'USER': '[YOUR-USERNAME]',
-            'PASSWORD': '[YOUR-PASSWORD]',
-            'NAME': '[YOUR-DATABASE]',
+            'HOST': '/cloudsql/echarlosperros-296404:us-central1:dbgeneral',
+            'USER': 'dbgeneral',
+            'PASSWORD': 'root',
+            'NAME': 'eyemy',
         }
     }
 else:
@@ -111,9 +111,9 @@ else:
             'ENGINE': 'django.db.backends.mysql',
             'HOST': '127.0.0.1',
             'PORT': '3306',
-            'NAME': '[YOUR-DATABASE]',
-            'USER': '[YOUR-USERNAME]',
-            'PASSWORD': '[YOUR-PASSWORD]',
+            'NAME': 'eyemy',
+            'USER': 'dbgeneral',
+            'PASSWORD': 'root',
         }
     }
 # [END db_setup]
@@ -165,3 +165,6 @@ USE_TZ = True
 
 STATIC_ROOT = 'static'
 STATIC_URL = '/static/'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')

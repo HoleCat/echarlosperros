@@ -1,9 +1,14 @@
-{% if latest_question_list %}
+{% extends 'layouts/app.html' %}
+{% block main_content %}
+<div class="jumbotron" style="border: black solid 1px;">
+    {% if latest_question_list %}
     <ul>
     {% for question in latest_question_list %}
         <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
     {% endfor %}
     </ul>
-{% else %}
-    <p>No polls are available.</p>
-{% endif %}
+    {% else %}
+        <p>No polls are available.</p>
+    {% endif %}
+</div>
+{% endblock %}
